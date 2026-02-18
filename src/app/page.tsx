@@ -7,16 +7,16 @@ export default function Home() {
       <Header />
       
       {/* Background Layer */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none w-full">
         {/* Top Gradient */}
         <div 
-          className="absolute inset-x-0 top-0 h-[60vh] opacity-50"
+          className="absolute inset-x-0 top-0 h-screen w-full opacity-50"
           style={{
             background: `radial-gradient(circle at 50% 0%, var(--color-accent-background-strong), transparent)`
           }}
         />
         {/* Grid/Line Pattern Simulation */}
-        <div className="absolute inset-0 opacity-[0.05]" 
+        <div className="absolute inset-0 opacity-[0.05] w-full h-full" 
              style={{ backgroundImage: `linear-gradient(to right, var(--color-accent-background-strong) 1px, transparent 1px), linear-gradient(to bottom, var(--color-accent-background-strong) 1px, transparent 1px)`, backgroundSize: '4rem 4rem' }} />
       </div>
 
