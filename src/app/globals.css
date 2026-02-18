@@ -1,42 +1,50 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+
+/* ONCE UI THEME CONFIGURATION 
+  Tailwind v4 allows us to define theme variables directly here.
+*/
+@theme {
+  /* Define Breakpoints if needed, otherwise TW4 defaults apply */
+  
+  /* Define Colors - Mapping abstract Once UI names to real colors */
+  --color-page-background: #000000;
+  
+  --color-brand-solid-strong: #3b82f6; /* Example Blue */
+  --color-brand-background-weak: #1e3a8a;
+  --color-brand-alpha-medium: rgba(59, 130, 246, 0.5);
+  --color-brand-alpha-weak: rgba(59, 130, 246, 0.2);
+
+  --color-accent-solid-strong: #ec4899; /* Example Pink */
+  --color-accent-background-strong: #831843;
+
+  --color-neutral-strong: #ffffff;
+  --color-neutral-medium: #a3a3a3;
+  --color-neutral-weak: #525252;
+  --color-neutral-alpha-medium: rgba(255, 255, 255, 0.2);
+  --color-neutral-alpha-weak: rgba(255, 255, 255, 0.1);
+
+  --color-static-transparent: transparent;
+  
+  /* Radii */
+  --radius-l: 1rem;
+  --radius-l-4: 1.25rem;
+  --radius-l-8: 1.5rem;
+  --radius-xl: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
+/* Base Styles */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background-color: var(--color-page-background);
+  color: var(--color-neutral-strong);
+  font-family: var(--font-geist-sans), sans-serif; /* Next.js default font */
+  overflow-x: hidden; /* Prevent horizontal scroll from effects */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Utilities for visual effects */
+@layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
