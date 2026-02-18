@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { Column, Row, Flex } from "@/components/once-ui/Flex";
+import { Column, Row } from "@/components/once-ui/Flex";
 import { ShineFx } from "@/components/once-ui/ShineFx";
 import { MatrixFx } from "@/components/once-ui/MatrixFx";
 import { CompareImage } from "@/components/once-ui/CompareImage";
@@ -7,19 +7,26 @@ import { Arrow } from "@/components/once-ui/Arrow";
 import { Fade } from "@/components/once-ui/Fade";
 import { Card, Hover } from "@/components/once-ui/Card";
 import { Carousel } from "@/components/once-ui/Carousel";
-import { Media } from "@/components/once-ui/Media";
 
 export default function Home() {
   const projects = [
     {
       title: "Videolytics",
-      description: "Advanced video stream analyzer using Streamlit and computer vision.",
+      description: "Advanced video stream analyzer using Streamlit and computer vision. Real-time object detection and metadata extraction.",
       media: [
         { slide: "/images/project1.jpg", alt: "Videolytics Dashboard" },
         { slide: "/videos/project1-demo.mp4", alt: "Live Demo" }
       ],
       link: "https://github.com/rudrapandya/videolytics"
-    }
+    },
+    {
+        title: "Polyglot Semantic Explorer",
+        description: "A multilingual semantic search engine powered by vector embeddings and high-performance retrieval metrics.",
+        media: [
+          { slide: "/images/project1.jpg", alt: "Search Interface" }, // Replace with real project image
+        ],
+        link: "https://github.com"
+      }
   ];
 
   return (
@@ -72,22 +79,23 @@ export default function Home() {
           <div className="h-1 w-20 bg-brand-solid-strong rounded-full" />
         </Column>
 
-        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Improved Grid Layout */}
+        <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12">
           {projects.map((project, idx) => (
             <Hover 
               key={idx}
               trigger={
-                <Card radius="l-8" padding="16">
+                <Card radius="l-8" padding="16" href={project.link}>
                   <Carousel items={project.media} />
                   <Column paddingX="20" paddingY="24" gap="8">
                     <h3 className="text-2xl font-semibold">{project.title}</h3>
-                    <p className="text-neutral-medium text-sm">{project.description}</p>
+                    <p className="text-neutral-medium leading-relaxed">{project.description}</p>
                   </Column>
                 </Card>
               }
               overlay={
-                <div className="absolute top-8 right-8 bg-brand-solid-strong px-4 py-1 rounded-full text-xs font-bold uppercase">
-                  View Case Study
+                <div className="absolute top-8 right-8 bg-brand-solid-strong px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
+                  Github
                 </div>
               }
             />

@@ -12,11 +12,23 @@ interface FlexProps extends React.HTMLAttributes<HTMLDivElement> {
   center?: boolean;
   fillWidth?: boolean;
   padding?: string;
+  paddingX?: string;
+  paddingY?: string;
   vertical?: 'center' | 'start' | 'end';
 }
 
 export const Flex = ({ 
-  children, direction = 'row', gap = "0", center, fillWidth, vertical, className, ...props 
+  children, 
+  direction = 'row', 
+  gap = "0", 
+  center, 
+  fillWidth, 
+  vertical, 
+  padding,
+  paddingX,
+  paddingY,
+  className, 
+  ...props 
 }: FlexProps) => {
   return (
     <div 
@@ -26,6 +38,10 @@ export const Flex = ({
         center && "justify-center items-center",
         vertical === 'center' && "items-center",
         fillWidth && "w-full",
+        // Map padding props to Tailwind classes
+        paddingX === "20" && "px-5",
+        paddingY === "12" && "py-3",
+        paddingY === "24" && "py-6",
         gap === "8" && "gap-2",
         gap === "12" && "gap-3",
         gap === "16" && "gap-4",
