@@ -28,40 +28,71 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Videolytics",
+      title: "⚕️Multi-Agent Advanced Healthcare Assistant",
       description:
-        "Advanced video stream analyzer using Streamlit and computer vision. Real-time object detection and metadata extraction for security streams.",
-      skills: ["Python", "Streamlit", "OpenCV", "PyTorch"],
-      github: "https://github.com/rudrapandya/videolytics",
-      live: "#",
+        "The Multi-Agent Medical Assistant is an AI-powered chatbot designed to assist with medical diagnosis, research, and patient interactions.",
+      skills: ["Python", "Tensorflow", "Huggingface", "FastAPI", "Computer Vision", "RAG", "Vector Database", "LangGraph", "LangChain"],
+      github: "https://github.com/Rudra-P11/Multi-Agent-Healthcare-Assistant",
+      live: "https://drive.google.com/drive/folders/1amk71Foo_c_V7cmZGpeuCYQygq54KiBz?usp=sharing",
       media: [
-        { slide: "/images/project1.jpg", alt: "Videolytics Dashboard" },
-        { slide: "/videos/project1-demo.mp4", alt: "Live Demo" },
+        { slide: "/images/project1.jpg", alt: "Healthcare App" },
+        { slide: "/videos/project1.gif", alt: "Demo Video" },
       ],
     },
     {
-      title: "Polyglot Semantic Explorer",
+      title: "Leetcoode: DSA Search Engine",
       description:
-        "A multilingual semantic search engine powered by vector embeddings. Capable of understanding context across 50+ languages.",
-      skills: ["React", "Node.js", "Pinecone", "Transformers"],
-      github: "https://github.com",
-      live: "#",
-      media: [{ slide: "/images/project1.jpg", alt: "Search Interface" }],
+        "DSA Search Engine - An intelligent search platform that aggregates problems from LeetCode, Codeforces, and CodeChef, allowing users to find problems using natural language queries powered by advanced information retrieval.",
+      skills: ["React", "Node.js", "tf-idf", "Pagination", "Semantic Search", "Web Scrapping"],
+      github: "https://github.com/Rudra-P11/DSA-Search-Engine",
+      live: "https://leetcoode.netlify.app/",
+      media: [{ slide: "/images/project4.gif", alt: "Search Interface" },
+        { slide: "/videos/project4.gif", alt: "Demo Video" },
+      ],
     },
+    {
+      title: "OctaByte: Dynamic Portfolio Dashboard",
+      description:
+        "Modern investors need real-time insights into their portfolio performance to make informed decisions—whether to buy, sell, hold, or add to positions. This is a dynamic web application that displays portfolio information, fetching live data from financial APIs.",
+      skills: ["React", "Node.js", "Yahoo-finance", "Typescript", "Scraping", "Optimizations"],
+      github: "https://github.com/Rudra-P11/OctaByte",
+      live: "https://octa-byte-iota.vercel.app",
+      media: [{ slide: "/images/project2.gif", alt: "Financial Dashboard" },
+        { slide: "/videos/project2.mp4", alt: "Demo Video" }
+      ],
+    },
+    {
+      title: "COiDE: AI-Powered Web Code Editor",
+      description:
+        "COiDE code Editor is a blazing-fast, AI-integrated web IDE built entirely in the browser using Next.js App Router, WebContainers, Monaco Editor, and local LLMs via Ollama. It offers real-time code execution, an AI-powered chat assistant, and support for multiple tech stacks — all wrapped in a stunning developer-first UI.",
+      skills: ["Next.js", "Node.js", "TailwindCSS", "Typescript", "Webcontainers", "LLMs (Ollama)", "MongoDb"],
+      github: "https://github.com/Rudra-P11/AI-Code-Editor",
+      live: "https://chai-vibe-code-editor.vercel.app/",
+      media: [{ slide: "/images/project3.svg", alt: "Web IDE" }
+      ],
+    }
   ];
 
   const skillCategories = [
     {
-      name: "Languages",
-      skills: ["Python", "JavaScript", "TypeScript", "C++"],
+      name: "Languages, Tools & Platforms",
+      skills: ["Python", "C++", "JavaScript", "TypeScript", "SQL", "C",
+        "Git", "Github", "Postman", "Wireshark", "Jupyter Notebook"
+      ],
     },
     {
-      name: "Frontend",
-      skills: ["React", "Next.js", "TailwindCSS"],
+      name: "Frontend & Deployment",
+      skills: ["React", "Next.js", "TailwindCSS", "ShadCN", "Once UI",
+        "Frontend Optimizations", "Caching", "API Endpoints", "AWS", "CI/CD",
+        "Docker"
+      ],
     },
     {
       name: "Backend & ML",
-      skills: ["Node.js", "Express", "PyTorch", "TensorFlow"],
+      skills: ["FastAPI", "Node.js", "Express.js", "MongoDB", 
+        "Sequelize", "PyTorch", "TensorFlow", 
+        "Pandas", "NumPy", "LangChain", "LangGraph"
+      ],
     },
   ];
 
@@ -93,8 +124,8 @@ export default function Home() {
       <Column fillWidth center className="pt-40 px-8 gap-24">
         <Column center gap="16">
           <ShineFx
-            speed={3}
-            className="text-5xl md:text-7xl font-bold tracking-tighter"
+            speed={8}
+            className="text-7xl md:text-9xl font-bold tracking-tighter"
           >
             Rudra Pandya
           </ShineFx>
@@ -106,7 +137,7 @@ export default function Home() {
             className="text-neutral-medium group cursor-pointer"
           >
             <span className="text-lg tracking-wide uppercase font-medium">
-              Explore my universe
+              Explore my profile
             </span>
             <Arrow trigger="#arrow-trigger-1" scale={1} />
           </Row>
@@ -127,8 +158,8 @@ export default function Home() {
 
         <div className="w-full max-w-4xl pb-40 px-4">
           <CompareImage
-            leftContent={{ src: "/images/1.jpg", alt: "Software Dev" }}
-            rightContent={{ src: "/images/2.jpg", alt: "ML Engineer" }}
+            leftContent={{ src: "/images/2.gif", alt: "Software Dev" }}
+            rightContent={{ src: "/images/1.gif", alt: "ML Engineer" }}
           />
         </div>
       </Column>
@@ -212,8 +243,8 @@ export default function Home() {
               className="border-t border-white/10 pt-8"
             >
               <h3
-                className="text-xs font-bold uppercase tracking-[0.4em] font-mono"
-                style={{ color: blueAccent }}
+                className="text-sm font-bold uppercase tracking-[0.4em] font-mono"
+                style={{ color: "Red" }}
               >
                 {category.name}
               </h3>
@@ -222,9 +253,9 @@ export default function Home() {
                 {category.skills.map((skill, sIdx) => (
                   <div
                     key={sIdx}
-                    className="px-4 py-2 bg-white/5 border border-white/10 hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 group cursor-default"
+                    className="px-4 py-2 bg-white/5 border border-white/10 hover:border-red-500 hover:bg-blue-500/10 transition-all duration-300 group cursor-default"
                   >
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-medium group-hover:text-blue-400 transition-colors">
+                    <span className="text-[15px] font-mono font-bold uppercase tracking-widest text-neutral-medium group-hover:text-red-400 transition-colors">
                       {skill}
                     </span>
                   </div>
@@ -248,30 +279,28 @@ export default function Home() {
           {/* Timeline */}
           <Column gap="8" fillWidth>
             <h3 className="text-xl font-semibold mb-8 text-neutral-strong tracking-tight flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               Career Timeline
             </h3>
 
             {/* Experience Item 1 */}
             <div className="flex gap-6 group relative">
-              <div className="absolute left-[5.5px] top-4 bottom-0 w-[1px] bg-gradient-to-b from-blue-500 to-transparent opacity-20" />
+              <div className="absolute left-[5.5px] top-4 bottom-0 w-[1px] bg-gradient-to-b from-green-500 to-transparent opacity-20" />
               <div className="flex flex-col items-center mt-1 z-10">
-                <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6] ring-2 ring-black" />
+                <div className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_#3b82f6] ring-2 ring-black" />
               </div>
               <div className="pb-12">
-                <span className="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-wider">
-                  FEB 2026 - PRESENT
+                <span className="px-2 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-red-400 text-[10px] font-bold tracking-wider">
+                  JUN 2025 - AUG 2025
                 </span>
                 <h4 className="text-lg font-bold text-white mt-2">
                   Software Development Intern
                 </h4>
                 <p className="text-sm text-neutral-medium italic">
-                  Upcoming / Seeking Opportunities
+                  ICONIC AI
                 </p>
                 <p className="text-sm text-neutral-medium mt-3 leading-relaxed border-l-2 border-white/5 pl-4">
-                  Preparing to contribute to scalable software solutions and
-                  high-impact web applications. Focusing on System Design and
-                  Backend Architecture.
+                  Designed and implemented NetSense, a real-time network analytics system for processing live packet streams and classifying domain activity into Productivity scores..
                 </p>
               </div>
             </div>
@@ -283,17 +312,37 @@ export default function Home() {
               </div>
               <div className="pb-12">
                 <span className="px-2 py-1 rounded bg-white/5 border border-white/10 text-neutral-medium text-[10px] font-bold tracking-wider">
-                  NOV 2025
+                  MAY 2024 - MAY 2025
                 </span>
                 <h4 className="text-lg font-bold text-white mt-2">
-                  Full Stack Developer
+                  Creative Team Lead
                 </h4>
                 <p className="text-sm text-neutral-medium italic">
-                  Freelance / Personal Projects
+                  Google Developer Groups, IIIT Dharwad
                 </p>
                 <p className="text-sm text-neutral-medium mt-3 leading-relaxed border-l-2 border-white/5 pl-4">
-                  Developed "Videolytics" and multiple full-stack applications
-                  integrating AI models with modern frontend frameworks.
+                  Lead a team of creative artists to build visually attractive media content for Google Developer Group, IIIT Dharwad.
+                </p>
+              </div>
+            </div>
+
+            {/* Experience Item 3 */}
+            <div className="flex gap-6 group">
+              <div className="flex flex-col items-center mt-1 z-10">
+                <div className="w-3 h-3 rounded-full bg-neutral-600 ring-2 ring-black" />
+              </div>
+              <div className="pb-12">
+                <span className="px-2 py-1 rounded bg-white/5 border border-white/10 text-neutral-medium text-[10px] font-bold tracking-wider">
+                  MAY 2024 - MAY 2025
+                </span>
+                <h4 className="text-lg font-bold text-white mt-2">
+                  Creative Lead
+                </h4>
+                <p className="text-sm text-neutral-medium italic">
+                  MSA, IIIT Dharwad
+                </p>
+                <p className="text-sm text-neutral-medium mt-3 leading-relaxed border-l-2 border-white/5 pl-4">
+                  Lead a team of creative artists to build visually attractive media content for Microsoft Student Ambassadors Chapter IIIT Dharwad.
                 </p>
               </div>
             </div>
@@ -302,7 +351,7 @@ export default function Home() {
           {/* Achievements & Stats */}
           <Column gap="12" fillWidth>
             <h3 className="text-xl font-semibold mb-6 text-neutral-strong tracking-tight flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               Glory & Stats
             </h3>
 
@@ -319,18 +368,18 @@ export default function Home() {
                     alt="Smart India Hackathon"
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
-                  <div className="absolute top-4 right-4 z-20 px-3 py-1 bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                    WINNER 2025
+                  <div className="absolute top-4 right-4 z-20 px-3 py-1 bg-red-500 text-white text-[10px] font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                    January 2026
                   </div>
                 </div>
               </GlitchFx>
 
               <div className="mt-4 px-2">
                 <h4 className="text-2xl font-bold text-white tracking-tight">
-                  Smart India Hackathon
+                  IBM Dev Day: AI Demystified
                 </h4>
                 <p className="text-neutral-medium text-sm mt-1">
-                  National Finalist • Innovation in AI Security
+                  International Hackathon
                 </p>
               </div>
             </div>
@@ -340,9 +389,9 @@ export default function Home() {
               <div className="p-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#ffa116] transition-all duration-300 group">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[10px] font-bold text-[#ffa116] uppercase tracking-widest">
-                    LEETCODE
+                    Data Structures
                   </span>
-                  <div className="w-2 h-2 rounded-full bg-[#ffa116] shadow-[0_0_8px_#ffa116]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ff1616] shadow-[0_0_8px_#ffa116]" />
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-3xl font-mono font-bold text-white group-hover:text-[#ffa116] transition-colors">
@@ -366,7 +415,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-3xl font-mono font-bold text-white group-hover:text-neutral-300 transition-colors">
-                    1600
+                    1480+
                   </span>
                   <span className="text-[10px] text-neutral-medium uppercase">
                     Max Rating
@@ -394,15 +443,15 @@ export default function Home() {
           {/* Header Text */}
           <Column center gap="8">
              <h2 className="text-6xl font-bold tracking-tighter text-white">Want to Connect?</h2>
-             <p className="text-neutral-medium">Ready to collaborate? Establish connection.</p>
+             <p className="text-neutral-medium">Write your message/mail. Establish connection.</p>
           </Column>
 
           {/* Social Links Row */}
           <Row center gap="32" className="flex-wrap">
              {[
-               { name: "GitHub", url: "https://github.com/rudrapandya" },
-               { name: "LinkedIn", url: "https://linkedin.com/in/rudrapandya" },
-               { name: "Email", url: "mailto:rudra@example.com" }
+               { name: "GitHub", url: "https://github.com/Rudra-P11" },
+               { name: "LinkedIn", url: "https://linkedin.com/in/rudrap11" },
+               { name: "Email", url: "mailto:pandyarudra2@gmail.com" }
              ].map((social) => (
                 <a 
                   key={social.name} 
@@ -447,7 +496,7 @@ export default function Home() {
                              name="email" 
                              required 
                              placeholder="enter_protocol: recruiter@company.com"
-                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm font-mono text-white placeholder:text-neutral-600 focus:outline-none focus:border-blue-500 transition-all"
+                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm font-mono text-white placeholder:text-neutral-600 focus:outline-none focus:border-green-500 transition-all"
                           />
                           {/* Corner accents */}
                           <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/20" />
@@ -456,7 +505,7 @@ export default function Home() {
                       <button 
                          type="submit" 
                          disabled={isPending}
-                         className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold tracking-[0.2em] uppercase rounded-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                         className="w-full py-3 bg-red-600 hover:bg-green-500 text-white text-xs font-bold tracking-[0.2em] uppercase rounded-lg shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                          {isPending ? "TRANSMITTING..." : "EXECUTE CONNECTION"}
                       </button>
