@@ -443,7 +443,7 @@ export default function Home() {
           {/* Header Text */}
           <Column center gap="8">
              <h2 className="text-6xl font-bold tracking-tighter text-white">Want to Connect?</h2>
-             <p className="text-neutral-medium">Write your message/mail. Establish connection.</p>
+             <p className="text-neutral-medium text-xl">Write your message/mail. Establish connection.</p>
           </Column>
 
           {/* Social Links Row */}
@@ -460,7 +460,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 group text-neutral-medium hover:text-white transition-colors px-4 py-2 rounded-full border border-transparent hover:border-white/10 hover:bg-white/5"
                 >
-                    <span className="text-sm font-mono uppercase tracking-widest">{social.name}</span>
+                    <span className="text-xl font-mono uppercase tracking-widest">{social.name}</span>
                     <div className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
                         {/* Custom Arrow Icon */}
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
