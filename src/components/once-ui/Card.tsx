@@ -7,7 +7,7 @@ interface CardProps {
   className?: string;
 }
 
-export const Card = ({ children, radius = "l-8", className }: CardProps) => {
+export const Card = ({ children, radius = "xl", className }: CardProps) => {
   return (
     <div 
       className={`

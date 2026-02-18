@@ -29,6 +29,28 @@ export default function Home() {
       media: [
         { slide: "/images/project1.jpg", alt: "Search Interface" },
       ],
+    },
+    {
+      title: "Videolytics",
+      description: "Advanced video stream analyzer using Streamlit and computer vision. Real-time object detection and metadata extraction for security streams.",
+      skills: ["Python", "Streamlit", "OpenCV", "PyTorch"],
+      github: "https://github.com/rudrapandya/videolytics",
+      live: "#",
+      media: [
+        { slide: "/images/project1.jpg", alt: "Videolytics Dashboard" },
+        { slide: "/videos/project1-demo.mp4", alt: "Live Demo" }
+      ],
+    },
+    {
+      title: "Videolytics",
+      description: "Advanced video stream analyzer using Streamlit and computer vision. Real-time object detection and metadata extraction for security streams.",
+      skills: ["Python", "Streamlit", "OpenCV", "PyTorch"],
+      github: "https://github.com/rudrapandya/videolytics",
+      live: "#",
+      media: [
+        { slide: "/images/project1.jpg", alt: "Videolytics Dashboard" },
+        { slide: "/videos/project1-demo.mp4", alt: "Live Demo" }
+      ],
     }
   ];
 
