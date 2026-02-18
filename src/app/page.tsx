@@ -1,31 +1,38 @@
 import Header from "@/components/Header";
-import { Column } from "@/components/once-ui/Flex";
+import { Column, Row } from "@/components/once-ui/Flex";
+import { ShineFx } from "@/components/once-ui/ShineFx";
+import { MatrixFx } from "@/components/once-ui/MatrixFx";
+import { CompareImage } from "@/components/once-ui/CompareImage";
 
 export default function Home() {
   return (
     <main id="home" className="relative min-h-screen">
       <Header />
       
-      {/* Background Layer */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none w-full">
-        {/* Top Gradient */}
-        <div 
-          className="absolute inset-x-0 top-0 h-screen w-full opacity-50"
-          style={{
-            background: `radial-gradient(circle at 50% 0%, var(--color-accent-background-strong), transparent)`
-          }}
-        />
-        {/* Grid/Line Pattern Simulation */}
-        <div className="absolute inset-0 opacity-[0.05] w-full h-full" 
-             style={{ backgroundImage: `linear-gradient(to right, var(--color-accent-background-strong) 1px, transparent 1px), linear-gradient(to bottom, var(--color-accent-background-strong) 1px, transparent 1px)`, backgroundSize: '4rem 4rem' }} />
-      </div>
+      {/* Background logic from earlier... */}
 
-      <Column fillWidth center className="pt-32 px-4">
-        {/* We will insert the Hero section here in the next step */}
-        <h1 className="text-6xl font-bold tracking-tighter">
-          Rudra Pandya
-        </h1>
-        <p className="text-neutral-medium mt-4">Setting up the canvas...</p>
+      <Column fillWidth center className="pt-40 px-8 gap-24">
+        {/* Shine Effect Headline */}
+        <Column center gap="16">
+          <ShineFx>Rudra Pandya</ShineFx>
+          <p className="max-w-xl text-center text-neutral-medium text-lg">
+            A CSE Undergrad at IIIT Dharwad passionate about building 
+            full-stack applications and exploring the depths of AI.
+          </p>
+        </Column>
+
+        {/* Matrix Effect */}
+        <div className="w-full max-w-4xl">
+          <MatrixFx height={15} />
+        </div>
+
+        {/* Compare Image Section */}
+        <div className="w-full max-w-4xl pb-20">
+          <CompareImage 
+             leftContent={{ src: "/images/1.jpg", alt: "Software Dev" }}
+             rightContent={{ src: "/images/2.jpg", alt: "ML Engineer" }}
+          />
+        </div>
       </Column>
     </main>
   );
